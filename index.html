@@ -1,5 +1,12 @@
 <!DOCTYPE HTML>
 <html>
+<title>Relena Wedding</title>
+    <body>
+        <div style="text-align:center;color: white;">
+            <p>They have 💍ed : )</p>
+        </div>
+        <img src="figures/wedding.jpg" alt="Wedding Image">
+    </body>
 <head>
 <link id="icon" rel="icon" type="image/x-icon" href="favicon.ico">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -36,7 +43,7 @@ var x = setInterval(function() {
   var now = new Date().getTime();
     
   // Find the distance between now and the count down date
-  var distance = countDownDate - now;
+  var distance = now - countDownDate;
     
   // Time calculations for days, hours, minutes and seconds
   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
@@ -50,9 +57,9 @@ var x = setInterval(function() {
   
     
   // If the count down is over, write some text 
-  if (distance < 0) {
+  if (distance > 0) {
     clearInterval(x);
-    document.getElementById("demo").innerHTML = "They have 💍ed : )";
+    document.getElementById("demo").innerHTML = days + " days<br>" + hours + " hours<br>" + minutes + " minutes<br>" + seconds + " seconds <br>and counting...";
   }
 }, 1000);
   
@@ -109,9 +116,4 @@ changeFavicon(days)
 
 </body>
 
-<body>
-    <img src="figures/wedding.jpg" alt="My Image">
-</body>
-
 </html>
-
